@@ -1,0 +1,20 @@
+[
+{
+  "modid": "berriespp",
+  "name": "Crops++",
+  "description": "Adds over 50 new Crops to IndustrialCraft² and adds several new Gregtech Recipes",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://github.com/bartimaeusnek/crops-plus-plus",
+  "updateUrl": "",
+  "authors": "bartimaeusnek",
+  "credits": "mushroomhostage",
+  "logoFile": "",
+  "screenshots": [ ],
+  "dependencies": [
+     "mod_MinecraftForge",
+     "mod_IC2",
+     "mod_CropLoadCore"
+  ]
+}
+]
