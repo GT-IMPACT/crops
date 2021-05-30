@@ -16,6 +16,7 @@ import net.minecraftforge.fluids.IFluidContainerItem;
 import java.util.List;
 
 import static com.github.bartimaeusnek.cropspp.ConfigValues.debug;
+import static net.minecraft.util.StatCollector.translateToLocal;
 
 public class ItemBppWateringCan extends Item implements IFluidContainerItem {
     private int content = 0;
@@ -62,12 +63,9 @@ public class ItemBppWateringCan extends Item implements IFluidContainerItem {
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
-        list.add("Max Capacity:");
-        list.add(Integer.toString(getCapacity(null)));
-        list.add("Contains:");
-        list.add(Integer.toString(content));
-        list.add("IsNutrient:");
-        list.add(String.valueOf(nutrient));
+        list.add(translateToLocal("watering.tooltip.0") + getCapacity(null));
+        list.add(translateToLocal("watering.tooltip.1") + content);
+        list.add(translateToLocal("watering.tooltip.2") + nutrient);
     }
 
     @Override

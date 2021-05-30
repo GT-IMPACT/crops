@@ -13,6 +13,8 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
+import static net.minecraft.util.StatCollector.translateToLocal;
+
 public class CppBerries extends ItemFood {
 
     public IIcon[] icons;
@@ -76,13 +78,13 @@ public class CppBerries extends ItemFood {
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
         switch (stack.getItemDamage()) {
             case 0: {
-                list.add("Huckle-dae-Duckle-dae-Doo");
-                list.add("A sweet treat!");
+                list.add(translateToLocal("berry.tooltip.0"));
+                list.add(translateToLocal("berry.tooltip.1"));
                 break;
             }
             case 1: {
-                list.add("A sweet beet, commonly found in France, Germany, Russia and China.");
-                list.add("Industrial Sugar!");
+                list.add(translateToLocal("berry.tooltip.2"));
+                list.add(translateToLocal("berry.tooltip.3"));
                 break;
             }
             //other cases

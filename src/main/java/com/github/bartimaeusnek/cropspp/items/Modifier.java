@@ -11,6 +11,8 @@ import net.minecraft.util.IIcon;
 
 import java.util.List;
 
+import static net.minecraft.util.StatCollector.translateToLocal;
+
 public class Modifier extends Item {
     public IIcon[] icons;
     public String[] textureNames = new String[]{"Space", "Magic", "Trophy"/*, "Anti","Growth","Gain","Resistance"*/};
@@ -36,13 +38,13 @@ public class Modifier extends Item {
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
         switch (stack.getItemDamage() % textureNames.length) {
             case 0:
-                list.add("Space Radiation caught in a Flower!");
+                list.add(translateToLocal("modifier.tooltip.0"));
                 break;
             case 1:
-                list.add("Pure Magic!");
+                list.add(translateToLocal("modifier.tooltip.1"));
                 break;
             case 2:
-                list.add("Challenge Accepted!");
+                list.add(translateToLocal("modifier.tooltip.2"));
                 break;
         /*case 3:
             list.add("!stooR-rettaM-itnA");

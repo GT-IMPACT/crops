@@ -9,6 +9,8 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
+import static net.minecraft.util.StatCollector.translateToLocal;
+
 public class Goldfish extends ItemFood {
 
     public Goldfish() {
@@ -21,7 +23,7 @@ public class Goldfish extends ItemFood {
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
-        list.add("Hozuki no Reitetsu! A truely hellish planimal?!");
+        list.add(translateToLocal("goldfish.tooltip.0"));
     }
 
     @Override

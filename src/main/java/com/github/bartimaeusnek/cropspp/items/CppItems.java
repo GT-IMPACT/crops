@@ -26,7 +26,6 @@ public final class CppItems {
     //public final static ItemStack Ga = new ItemStack(Modifier, 1, 5);
     //public final static ItemStack Re = new ItemStack(Modifier, 1, 6);
     public final static Item CppBerries = new CppBerries();
-    public final static Item CppPotions = new CppPotions();
 
     public final static void register_Items() {
         if (ConfigValues.Items) {
@@ -38,8 +37,6 @@ public final class CppItems {
             GameRegistry.registerCustomItemStack("ModifierMagic", ModifierMagic);
             //GameRegistry.registerCustomItemStack("ModifierAnti", ModifierAnti);
             GameRegistry.registerCustomItemStack("Trophy", Trophy);
-            if (ModsLoaded.GT)
-                GameRegistry.registerItem(CppPotions, "BppPotions");
             GameRegistry.registerItem(CppBerries, "foodBerries");
             GameRegistry.registerCustomItemStack("berryHuckle", new ItemStack(CppBerries, 1, 0));
             GameRegistry.registerCustomItemStack("sugarbeet", new ItemStack(CppBerries, 1, 1));

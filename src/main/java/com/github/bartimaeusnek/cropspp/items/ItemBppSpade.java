@@ -23,6 +23,8 @@ import net.minecraft.world.World;
 import java.util.List;
 import java.util.Set;
 
+import static net.minecraft.util.StatCollector.translateToLocal;
+
 public class ItemBppSpade extends ItemTool {
     private static Set BlocksAffected = Sets.newHashSet(new Block[]{Blocks.grass, Blocks.dirt, Blocks.snow_layer, Blocks.farmland, Blocks.mycelium, StackUtil.getBlock(ic2.core.Ic2Items.crop)});
 
@@ -38,9 +40,9 @@ public class ItemBppSpade extends ItemTool {
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
-        list.add("Weeding Trowel, Shovel and Hoe in one Item!");
-        list.add("Has a higher chanche of yielding seedbags!");
-        list.add("Indestructible");
+        list.add(translateToLocal("spade.tooltip.0"));
+        list.add(translateToLocal("spade.tooltip.1"));
+        list.add(translateToLocal("spade.tooltip.2"));
     }
 
     @Override

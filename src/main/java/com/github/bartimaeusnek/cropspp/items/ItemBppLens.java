@@ -12,6 +12,8 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
+import static net.minecraft.util.StatCollector.translateToLocal;
+
 public class ItemBppLens extends Item {
 
     public ItemBppLens() {
@@ -26,8 +28,8 @@ public class ItemBppLens extends Item {
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack p_77624_1_, EntityPlayer p_77624_2_, List list, boolean p_77624_4_) {
-        list.add("A Simple Lens to determine Crop Species");
-        list.add("Indestructible.");
+        list.add(translateToLocal("lens.tooltip.0"));
+        list.add(translateToLocal("lens.tooltip.1"));
     }
 
     @Override
